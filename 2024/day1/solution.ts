@@ -17,8 +17,8 @@ const splitData: SplitData[] = data.split("\n").map((element) => {
   };
 });
 
-const left = splitData.map((item) => item.leftElement).sort((a, b) => a - b);
-const right = splitData.map((item) => item.rightElement).sort((a, b) => a - b);
+const left = splitData.map((item) => item.leftElement).sort();
+const right = splitData.map((item) => item.rightElement).sort();
 
 for (let i = 0; i < left.length; i++) {
   totalDistance += Math.abs(left[i] - right[i]);
